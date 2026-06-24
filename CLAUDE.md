@@ -7,7 +7,7 @@ schedule so walks don't clash (preventing double-booking is the core goal).
 Not a public-facing app — access is gated by an invite code at registration.
 
 ## Stack
-- **Framework**: Next.js 15 (App Router) + TypeScript
+- **Framework**: Next.js 16 (App Router) + TypeScript
 - **Styling**: Tailwind CSS
 - **Backend/DB/Auth/Storage**: Supabase (PostgreSQL, auth, file storage for animal photos)
 - **Supabase client**: `@supabase/supabase-js` + `@supabase/ssr` for Next.js
