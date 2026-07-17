@@ -74,7 +74,19 @@ concrete need appears.
 - Do not use `any` in TypeScript
 
 ## Testing
-Vitest + Testing Library for unit/component tests. Run with `npm test`.
+Vitest + Testing Library (happy-dom environment — jsdom v27 fails to load under Node 20).
+Config in `vitest.config.mts` (`.mts` so it loads as ESM). Run `npm test` (once) or
+`npm run test:watch`. Unit-test domain logic in `lib/`; component tests render with
+`NextIntlClientProvider` and mock server-only modules. Manual click-through cases in TESTING.md.
+
+**Rule — tests are part of every feature (definition of done):** no requirement is complete
+until it has tests. For each new piece of functionality:
+- Domain logic in `lib/` → unit tests (always; this is the cheapest, highest-value coverage).
+- Components/forms → a component test for the important behaviour (states, conditionals, copy).
+- Server actions → test the pure logic they call (validation, domain rules); mock Supabase.
+- Add/update the manual click-through cases in TESTING.md.
+- `npm test` must pass before a requirement is marked ✅ in REQUIREMENTS.md.
+Skip a test only with an explicit, stated reason — never silently.
 
 ## Running locally
 ```bash
