@@ -1,0 +1,26 @@
+{
+  "register": {
+    "title": "Dołącz do grupy spacerowej",
+    "subtitleWithCode": "Masz zaproszenie — załóż konto, aby dołączyć.",
+    "subtitleManual": "Podaj kod zaproszenia od osoby, która Cię zaprosiła.",
+    "email": "E-mail",
+    "password": "Hasło",
+    "inviteCode": "Kod zaproszenia",
+    "submit": "Załóż konto",
+    "submitting": "Zakładanie konta…",
+    "successTitle": "Sprawdź swoją skrzynkę",
+    "successBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby dokończyć zakładanie konta."
+  },
+  "errors": {
+    "invalidEmail": "Podaj poprawny adres e-mail.",
+    "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "inviteRequired": "Kod zaproszenia jest wymagany.",
+    "invalidInvite": "Ten kod zaproszenia jest nieprawidłowy. Poproś osobę, która Cię zaprosiła, o aktualny.",
+    "signupFailed": "Nie udało się założyć konta. Spróbuj ponownie."
+  },
+  "language": {
+    "label": "Język",
+    "pl": "Polski",
+    "en": "English"
+  }
+}

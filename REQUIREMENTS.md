@@ -41,8 +41,8 @@ Everything else is Phase 2+ and only built once the MVP works and the group like
 ## Features
 
 ### Access & accounts
-- [ ] R1: A volunteer can register with email + password + a shared **invite code**
-- [ ] R2: Registration is rejected if the invite code is wrong
+- [x] R1: A volunteer can register with email + password + a shared **invite code** ✅
+- [x] R2: Registration is rejected if the invite code is wrong ✅
 - [ ] R3: The invite code can be changed without affecting already-registered volunteers
 - [ ] R4: A volunteer can log in and log out
 - [ ] R5: No part of the app is accessible without being logged in (no public pages)
@@ -95,6 +95,13 @@ Everything else is Phase 2+ and only built once the MVP works and the group like
 - [ ] R29: A volunteer can loosely signal a day's intent without a firm reservation —
       "planning to come today" / "not coming today" — visible to others (walks are often
       spontaneous, so this is lighter than R10's reservation).
+
+### Auth extras & i18n
+- [ ] R30: Volunteers can sign up / log in with Google (OAuth), alongside email+password.
+      The invite gate still applies: a first-time Google user must come through a valid invite
+      link (code carried through the OAuth flow) — introduces a volunteer-profile concept.
+- [x] R31: Bilingual UI (Polish + English) via next-intl — defaults to system/browser language,
+      overridable in-app (NEXT_LOCALE cookie). ✅
 
 ### PWA & infra
 - [ ] R18: App is installable on mobile ("Add to Home Screen" on iOS/Android)

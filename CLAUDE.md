@@ -18,6 +18,17 @@ Not a public-facing app — access is gated by an invite code at registration.
 ## Conventions
 - TypeScript everywhere, strict mode
 - No `any` types
+- **UI language: Polish + English (bilingual).** All user-facing copy goes through next-intl —
+  no hardcoded strings in components. Add every new string to BOTH `messages/pl.json` and
+  `messages/en.json`, and reference it by key (e.g. `t("register.title")`). Locale defaults to
+  the system/browser language and is overridable in-app (stored in the `NEXT_LOCALE` cookie).
+  Code identifiers, filenames, commit messages, and this doc stay English.
+- **i18n structure**: locale resolution in `i18n/request.ts`, server-free constants in
+  `i18n/config.ts`, translation files in `messages/`. Error messages are returned as translation
+  KEYS from server actions/zod (e.g. `errors.invalidInvite`) and resolved with `t()` in the UI.
+- **Minimal comments.** Prefer self-explanatory names over comments. Comment only genuinely
+  non-obvious logic (e.g. an empty catch that needs a reason). Architectural rationale/patterns
+  go in this file, not inline in the code.
 - Component files: PascalCase (`BookingForm.tsx`) inside `app/` or `components/`
 - Utility/hook files: camelCase (`useReservations.ts`) inside `lib/` or `hooks/`
 - Supabase client lives in `lib/supabase/` — server client and browser client are separate files

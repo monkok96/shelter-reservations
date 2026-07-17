@@ -1,0 +1,26 @@
+{
+  "register": {
+    "title": "Join the walk group",
+    "subtitleWithCode": "You have an invite — create an account to join.",
+    "subtitleManual": "Enter the invite code from the person who invited you.",
+    "email": "Email",
+    "password": "Password",
+    "inviteCode": "Invite code",
+    "submit": "Create account",
+    "submitting": "Creating account…",
+    "successTitle": "Check your email",
+    "successBody": "We sent you a confirmation link. Click it to finish creating your account."
+  },
+  "errors": {
+    "invalidEmail": "Enter a valid email address.",
+    "passwordTooShort": "Password must be at least 8 characters.",
+    "inviteRequired": "The invite code is required.",
+    "invalidInvite": "That invite code isn't valid. Ask whoever invited you for the current one.",
+    "signupFailed": "We couldn't create the account. Please try again."
+  },
+  "language": {
+    "label": "Language",
+    "pl": "Polski",
+    "en": "English"
+  }
+}
