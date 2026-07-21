@@ -9,13 +9,34 @@
     "submit": "Create account",
     "submitting": "Creating account…",
     "successTitle": "Check your email",
-    "successBody": "We sent you a confirmation link. Click it to finish creating your account."
+    "successBody": "We sent you a confirmation link. Click it to finish creating your account.",
+    "haveAccount": "Already have an account?",
+    "loginLink": "Log in"
+  },
+  "login": {
+    "title": "Log in",
+    "subtitle": "Enter your email and password to continue.",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Log in",
+    "submitting": "Logging in…",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Create account"
+  },
+  "home": {
+    "greeting": "Hi, {email}",
+    "placeholder": "The walk board will appear here soon."
+  },
+  "nav": {
+    "logout": "Log out"
   },
   "errors": {
     "invalidEmail": "Enter a valid email address.",
     "passwordTooShort": "Password must be at least 8 characters.",
+    "passwordRequired": "Enter your password.",
     "inviteRequired": "The invite code is required.",
     "invalidInvite": "That invite code isn't valid. Ask whoever invited you for the current one.",
+    "invalidCredentials": "Wrong email or password.",
     "signupFailed": "We couldn't create the account. Please try again."
   },
   "language": {

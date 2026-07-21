@@ -44,8 +44,8 @@ Everything else is Phase 2+ and only built once the MVP works and the group like
 - [x] R1: A volunteer can register with email + password + a shared **invite code** ✅
 - [x] R2: Registration is rejected if the invite code is wrong ✅
 - [ ] R3: The invite code can be changed without affecting already-registered volunteers
-- [ ] R4: A volunteer can log in and log out
-- [ ] R5: No part of the app is accessible without being logged in (no public pages)
+- [x] R4: A volunteer can log in and log out ✅
+- [x] R5: No part of the app is accessible without being logged in (no public pages) ✅
 - [ ] R21: Any logged-in volunteer can generate & share an invite link to the group
       (Splitwise-style) — not just an admin. The link carries the current invite code.
 

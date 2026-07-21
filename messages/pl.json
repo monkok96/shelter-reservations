@@ -9,13 +9,34 @@
     "submit": "Załóż konto",
     "submitting": "Zakładanie konta…",
     "successTitle": "Sprawdź swoją skrzynkę",
-    "successBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby dokończyć zakładanie konta."
+    "successBody": "Wysłaliśmy link potwierdzający. Kliknij go, aby dokończyć zakładanie konta.",
+    "haveAccount": "Masz już konto?",
+    "loginLink": "Zaloguj się"
+  },
+  "login": {
+    "title": "Zaloguj się",
+    "subtitle": "Wpisz swój e-mail i hasło, aby wejść.",
+    "email": "E-mail",
+    "password": "Hasło",
+    "submit": "Zaloguj się",
+    "submitting": "Logowanie…",
+    "noAccount": "Nie masz konta?",
+    "registerLink": "Załóż konto"
+  },
+  "home": {
+    "greeting": "Cześć, {email}",
+    "placeholder": "Wkrótce pojawi się tu tablica spacerów."
+  },
+  "nav": {
+    "logout": "Wyloguj się"
   },
   "errors": {
     "invalidEmail": "Podaj poprawny adres e-mail.",
     "passwordTooShort": "Hasło musi mieć co najmniej 8 znaków.",
+    "passwordRequired": "Podaj hasło.",
     "inviteRequired": "Kod zaproszenia jest wymagany.",
     "invalidInvite": "Ten kod zaproszenia jest nieprawidłowy. Poproś osobę, która Cię zaprosiła, o aktualny.",
+    "invalidCredentials": "Nieprawidłowy e-mail lub hasło.",
     "signupFailed": "Nie udało się założyć konta. Spróbuj ponownie."
   },
   "language": {

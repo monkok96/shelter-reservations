@@ -15,6 +15,8 @@ What's covered so far:
 | `lib/domain/buckets.test.ts` | bucket order, lookup, hour formatting, no gaps/overlaps |
 | `lib/validation/auth.test.ts` | register schema — valid input + each error key |
 | `components/RegisterForm.test.tsx` | invite field shown/hidden, Polish vs English copy |
+| `lib/auth/routes.test.ts` | which paths are public vs gated (login redirect logic) |
+| `components/LoginForm.test.tsx` | login fields, register link, PL vs EN copy |
 
 Convention: unit-test domain logic in `lib/` (the important seam). Component tests
 render with `NextIntlClientProvider` and mock server-only modules.
@@ -43,6 +45,18 @@ npm run dev   # http://localhost:3000
 - [ ] Open `/register/wrong-code` → submit valid email/password → "invite code isn't valid"
 - [ ] Open `/register` (manual) → type a wrong code → same rejection
 - [ ] Open `/register` → leave code empty → "invite code is required"
+
+### Login & logout (R4)
+- [ ] Register + confirm an account, then open `/login` → log in with those credentials → lands on home ("Hi, <email>")
+- [ ] Wrong password → "Wrong email or password"
+- [ ] Invalid email format → validation error
+- [ ] Click "Log out" on the home page → returns to `/login`
+
+### Gating — no access without login (R5)
+- [ ] While logged out, open `/` directly → redirected to `/login`
+- [ ] While logged out, `/login`, `/register`, `/register/<code>` still load (public)
+- [ ] Log in, then open `/` → loads normally (no redirect)
+- [ ] Log out, press browser back → still redirected to `/login` (no stale access)
 
 ### Language (R31)
 - [ ] On `/register`, the PL/EN switcher (top-right) flips all copy
