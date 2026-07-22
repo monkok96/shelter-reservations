@@ -23,10 +23,10 @@ export function LanguageSwitcher() {
           type="button"
           onClick={() => setLocale(code)}
           disabled={isPending || locale === code}
-          className={`rounded px-2 py-1 uppercase ${
+          className={`rounded px-2 py-1 uppercase transition ${
             locale === code
-              ? "font-semibold text-neutral-900 dark:text-neutral-100"
-              : "text-neutral-400 hover:text-neutral-600 dark:hover:text-neutral-300"
+              ? "font-semibold text-accent"
+              : "text-muted hover:text-foreground"
           }`}
         >
           {code}

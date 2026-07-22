@@ -1,3 +1,4 @@
+import { AuthShell } from "@/components/AuthShell";
 import { RegisterForm } from "@/components/RegisterForm";
 
 export default async function RegisterWithCodePage({
@@ -6,5 +7,9 @@ export default async function RegisterWithCodePage({
   params: Promise<{ code: string }>;
 }) {
   const { code } = await params;
-  return <RegisterForm initialCode={code} />;
+  return (
+    <AuthShell>
+      <RegisterForm initialCode={code} />
+    </AuthShell>
+  );
 }

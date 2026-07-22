@@ -43,5 +43,9 @@
     "label": "Język",
     "pl": "Polski",
     "en": "English"
+  },
+  "theme": {
+    "light": "Jasny",
+    "dark": "Ciemny"
   }
 }

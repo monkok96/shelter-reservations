@@ -7,12 +7,18 @@ import { registerSchema } from "@/lib/validation/auth";
 export type RegisterState = {
   errorKey?: string;
   success?: boolean;
+  email?: string;
+  inviteCode?: string;
 };
 
 export async function register(
   _prevState: RegisterState,
   formData: FormData,
 ): Promise<RegisterState> {
+  const rawEmail = formData.get("email")?.toString() ?? "";
+  const rawInviteCode = formData.get("inviteCode")?.toString() ?? "";
+  const filled = { email: rawEmail, inviteCode: rawInviteCode };
+
   const parsed = registerSchema.safeParse({
     email: formData.get("email"),
     password: formData.get("password"),
@@ -20,20 +26,20 @@ export async function register(
   });
 
   if (!parsed.success) {
-    return { errorKey: parsed.error.issues[0].message };
+    return { errorKey: parsed.error.issues[0].message, ...filled };
   }
 
   const { email, password, inviteCode } = parsed.data;
 
   if (!verifyInviteCode(inviteCode)) {
-    return { errorKey: "errors.invalidInvite" };
+    return { errorKey: "errors.invalidInvite", ...filled };
   }
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signUp({ email, password });
 
   if (error) {
-    return { errorKey: "errors.signupFailed" };
+    return { errorKey: "errors.signupFailed", ...filled };
   }
 
   return { success: true };

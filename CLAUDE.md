@@ -46,6 +46,17 @@ Not a public-facing app — access is gated by an invite code at registration.
 - Real, specific copy ("3 dogs still need a morning walk"), not filler.
 - A small amount of personality is fine (it's about dogs) — just make it feel intentional.
 
+## Design system
+- Theme: **Warm & friendly**. Defaults to **light**; dark mode is class-based (`<html class="dark">`)
+  and toggled in-app via `components/ThemeToggle.tsx` (choice stored in the `theme` cookie, read
+  server-side in `app/layout.tsx`). Not system-driven, so it opens light by default.
+- Use the color TOKENS, never raw `neutral-*`/hex in components: `bg-background`, `bg-surface`,
+  `text-foreground`, `text-muted`, `border-border`, `bg-accent`/`text-accent-foreground`/
+  `hover:bg-accent-hover`, `text-accent`. Tokens are defined in `app/globals.css` and flip for dark.
+- Accent is terracotta. Shared form classes live in `components/formClasses.ts`
+  (`inputClass`, `primaryButtonClass`, `linkClass`) — reuse them, don't re-style inputs/buttons.
+- Auth screens use `components/AuthShell.tsx` (wordmark + card + language switcher).
+
 ## Code quality / good practices
 Guiding balance: **simple now, but easy to extend.** Keep the code minimal, but leave clean
 seams so Phase 2/3 features slot in without a rewrite. Use a pattern when it buys real
