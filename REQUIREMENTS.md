@@ -12,7 +12,8 @@ A group of shelter volunteers take dogs on walks. They need to coordinate who
 walks which dog and when, so that:
 - dogs get walked without two volunteers showing up for the same dog at once (clashes),
 - everyone can see the shared schedule,
-- volunteers can flag the dogs they especially care for ("podopieczni").
+- volunteers can flag the dogs they especially care for ("podopieczni"),
+- volunteers can coordinate dogs that share a kennel ("boks"), which are usually walked together.
 
 Shelter staff/workers are NOT users of this app (out of scope for now).
 The app is for the closed volunteer group only — not the public.
@@ -33,7 +34,7 @@ Everything else is Phase 2+ and only built once the MVP works and the group like
 - **Phase 1 (MVP):** R1, R2, R4, R5, R6, R8, R10, R11, R12, R14
 - **Phase 2:** R3 (rotate code), R7 (inactive dogs), R9 (dog detail), R13 (my walks),
   R15–R17 (podopieczni), R21 (invite link), R22–R23 (home board), R24 (log past walk),
-  R25–R26 (dog labels), R27–R28 (opiekunowie)
+  R25–R26 (dog labels), R27–R28 (opiekunowie), R32–R36 (kennels/boksy + coordination)
 - **Phase 3:** R18, R19 (PWA + offline), R20 (keep-alive ping), R29 (daily intent signalling)
 
 ---
@@ -75,6 +76,21 @@ Everything else is Phase 2+ and only built once the MVP works and the group like
 - [ ] R14: A volunteer can cancel a walk they signed up for
 - [ ] R24: A volunteer can mark a dog as walked after the fact (log a completed walk),
       not only reserve future ones — so the schedule reflects spontaneous, unplanned walks too.
+
+### Kennels (boksy) — grouping & walk coordination
+Several dogs often share a **kennel** (PL "boks"). Dogs in a kennel are usually walked at the
+same time (volunteers meet, head out and come back together, sometimes splitting mid-walk).
+Reservations stay PER-DOG (no single group reservation — one person can't know when others are
+free); the app's job is to make converging on the same slot easy.
+- [ ] R32: A kennel is an entity (name/number). Any volunteer can create, rename, or remove a kennel.
+- [ ] R33: Each dog can be assigned to one kennel (or none — e.g. new dogs). Any volunteer can
+      move a dog to a different kennel when the shelter switches dogs around.
+- [ ] R34: Dogs are grouped by kennel on the board/list, so boks-mates are visible together.
+- [ ] R35: Coordination view — for a kennel + date + bucket, a volunteer sees which dogs already
+      have a walk (and by whom) and which still need one, and can "join" by signing up for a
+      remaining dog in the SAME date+bucket in one tap. Still per-dog reservations (R10/R11 apply).
+- [ ] R36: A kennel shows an at-a-glance coverage summary for a slot, e.g. "Boks 5 — rano: 2/3",
+      so volunteers can tell if a kennel is fully arranged for that time.
 
 ### Dog attributes & labels
 - [ ] R25: A dog can have custom handling labels/notes — e.g. reactive, hard to get out of the

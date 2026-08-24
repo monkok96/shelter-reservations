@@ -112,6 +112,11 @@ npm run dev       # starts at http://localhost:3000
   **bucket** (morning / afternoon / evening). No exact time or duration. Buckets map to
   display hours (configurable). Walks can also be logged after the fact (spontaneous walks).
 - **Bucket** — morning / afternoon / evening. A dog has at most one walk per bucket.
+- **Kennel** (PL "boks", code identifier `kennel`) — a housing unit holding several dogs. A dog
+  belongs to at most one kennel (or none); any volunteer can create kennels and move dogs between
+  them (shelter reshuffles happen). Dogs in a kennel are usually walked at the same time, so the
+  app groups by kennel and helps volunteers converge on a slot — but reservations stay PER-DOG
+  (no single group reservation). See R32–R36.
 - **Podopieczny / opiekun** — a dog a volunteer marks as "their" special-care dog (volunteer
   side: podopieczny; dog side: opiekun, max ~2–3). Currently just a favorite/label for
   visibility — grants NO special permissions; any volunteer can still walk any dog.
