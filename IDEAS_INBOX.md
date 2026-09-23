@@ -13,6 +13,16 @@
 
 ## ✏️ New ideas (write below this line — unprocessed)
 
+- Adoption drivers (make volunteers prefer the app over WhatsApp — for later):
+  - "Share to WhatsApp" button on the "I'm out" / "needs help" signals: one-tap prefilled
+    message with a link back into the app. Strongest lever — turns WhatsApp into a channel
+    that pulls people into the app.
+  - New-arrival and "adopted 🎉" moments on dog pages — emotional pull, something people
+    want to open (use sparingly per design principles).
+  - Gentle PRIVATE walk count ("you walked 14× this month"), for your own eyes only —
+    motivation without leaderboard pressure.
+  - Strategy note: app = the shared brain (instant "what needs doing?" board, source of
+    truth for kennel rosters, zero-friction PWA + Google login); WhatsApp stays the chat.
 -
 
 ---

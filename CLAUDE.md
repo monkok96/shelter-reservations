@@ -117,9 +117,15 @@ npm run dev       # starts at http://localhost:3000
   them (shelter reshuffles happen). Dogs in a kennel are usually walked at the same time, so the
   app groups by kennel and helps volunteers converge on a slot — but reservations stay PER-DOG
   (no single group reservation). See R32–R36.
-- **Podopieczny / opiekun** — a dog a volunteer marks as "their" special-care dog (volunteer
-  side: podopieczny; dog side: opiekun, max ~2–3). Currently just a favorite/label for
-  visibility — grants NO special permissions; any volunteer can still walk any dog.
+- **Podopieczny / opiekun** — a dog a volunteer takes special care of (volunteer side:
+  podopieczny; dog side: opiekun, max ~2–3). Opiekunowie carry SOFT priority: their dogs aren't
+  shown as "open for anyone" unless the opiekun signals absence or asks for help. No HARD
+  permissions — any volunteer can still walk any dog.
+- **Coordination is EXCEPTION-BASED** (see REQUIREMENTS "Coordination model"). The app assumes
+  opiekunowie cover their dogs and only surfaces exceptions: opiekun "I'm out" (R29), no-opiekun
+  dogs (R28), or "needs help" (R37). Positive "I'll take it" claims (R10) are optional. Goal:
+  most volunteers do nothing most days. Kennels replace the WhatsApp groups' state (not chat);
+  app complements WhatsApp — no in-app chat/notifications yet.
 - **Clash** — two volunteers reserving the same dog in the same bucket. BLOCKED. A second walk
   in a *different* bucket the same day is allowed, but deprioritizes the dog on the home board.
 - **Admin** — deferred. Not built yet. All volunteers are equal for now.
